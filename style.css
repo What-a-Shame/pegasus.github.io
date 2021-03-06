@@ -23,7 +23,7 @@ header nav a{
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
-    margin-right: 35px;
+    margin: 15px;
     color: #ffffffff;
 }
 
@@ -101,8 +101,54 @@ main #seccion1 a:hover {
 }
 
 .config:hover {
-    background-color: #046df5;
+    background-color: #046cf598;
 }
+
+/* MAIN CONFIGURADOR.HTML */
+
+main #config{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 200px;
+}
+
+form .cajones {
+    padding: 20px;
+    margin: 0 50px;
+}
+
+input[type=button], select{
+    border:2px solid #181818 ;
+    background-color: #ffffffff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+input[type=button] {
+    font-weight: bold;
+    box-shadow: 1px 1px 5px #046df5;
+}
+
+input[type=button]:hover{
+    background-color: #046cf598;
+    cursor: pointer;
+}
+
+form#configurador label{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+main #config img{
+    width: 350px;
+    height: 200px;
+    margin: 0 50px;
+}
+
 
 /* FOOTER */
 footer {
