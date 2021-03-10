@@ -1,12 +1,17 @@
-/* RESETEO */
+/* RESETEO -------------------------------------------------------------------------------- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* BODY -------------------------------------------------------------------------------- */
+
+body{
     font-family: 'Arvo';
 }
 
-/* HEADER */
+/* HEADER -------------------------------------------------------------------------------- */ 
 header{
     text-align: center;
     padding: 25px;
@@ -33,7 +38,13 @@ header nav a:hover{
     border-radius: 5px;
 }
 
-/* MAIN */
+/* MAIN -------------------------------------------------------------------------------- */
+
+/* ANCHO DEL MAIN */
+main{
+    width: 90%;
+    margin: auto;
+}
 
 /* MAIN INDEX.HTML */
 main #seccion1{
@@ -41,7 +52,7 @@ main #seccion1{
     align-items: flex-end;
     justify-content: center;
     height: 800px;
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(2, 49, 150, 0.6)), url(assets/coches.jpg) no-repeat center center/cover;
+    background: linear-gradient(#0000005b,#023196a8), url(assets/coches.jpg) no-repeat center center/cover;
     padding-bottom: 200px;
 }
 
@@ -54,26 +65,25 @@ main #seccion1 a{
 }
 
 main #seccion1 a:hover {
-    background-color: rgba(255, 255, 255, 0.295);
+    background-color: 	#ffffff65;
     border-radius: 50px;
 }
 
-/* MAIN P1.HTML */
+/* MAIN P1.HTML -------------------------------------------------------------------------------- */
 
 .vehiculos {
-    display: inline-block;
-    margin: 50px 0;
-    padding: 0 0 0 70px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.caja-vehiculos {
+    margin: 20px;
 }
 
 .infoV p {
     width: 350px;
     text-align: justify;
-}
-
-.vehiculos h2{
-    max-width: max-content;
-    border-bottom: 2px solid #181818;
 }
 
 .vimage {
@@ -86,11 +96,9 @@ main #seccion1 a:hover {
     font-weight: bold;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 30px;
 }
 
 .config{
-    max-width: fit-content;
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -104,33 +112,41 @@ main #seccion1 a:hover {
     background-color: #046cf598;
 }
 
-/* MAIN CONFIGURADOR.HTML */
+/* MAIN CONFIGURADOR.HTML -------------------------------------------------------------------------------- */
 
 main #config{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 200px;
+    align-items: center;
 }
+
+/* FORMULARIO DE CONFIGURACION -------------------------------------------------------------------------------- */
 
 form .cajones {
     padding: 20px;
-    margin: 0 50px;
+    margin: 0 175px;
 }
 
-input[type=button], select{
+section#config article #configurador a, select{
     border:2px solid #181818 ;
     background-color: #ffffffff;
     padding: 10px;
     border-radius: 50px;
 }
 
-input[type=button] {
+select:focus{
+    outline: none;
+}
+
+section#config article #configurador a {
+    text-decoration: none;
     font-weight: bold;
+    color: #000000;
     box-shadow: 1px 1px 5px #046df5;
 }
 
-input[type=button]:hover{
+section#config article #configurador a:hover {
     background-color: #046cf598;
     cursor: pointer;
 }
@@ -143,14 +159,97 @@ form#configurador label{
     margin-bottom: 20px;
 }
 
+/* IMAGENES DEL CONFIGURADOR -------------------------------------------------------------------------------- */
+
+main section#config article#imgconfig {
+    width: 50%;
+}
+
 main #config img{
     width: 350px;
     height: 200px;
-    margin: 0 50px;
+    margin: 25px 25px;
+}
+
+main section#config article img:hover{
+    cursor: pointer;
+}
+
+/* P2.HTML -------------------------------------------------------------------------------- */
+
+main#main-flex {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* CUERPO DEL MAIN -------------------------------------------------------------------------------- */
+
+main#main-flex section{
+    width: 100%;
+    text-align: center;
+}
+
+/* ASIDE -------------------------------------------------------------------------------- */
+
+.iconos {
+    font-size: 50px;
+}
+
+main#main-flex aside a{
+    padding: 50px;
+    display: flex;
+}
+
+main#main-flex aside a{
+    text-decoration: none;
+}
+
+/* FORMULARIO DE COMPRA ( P2.HTML ) -------------------------------------------------------------------------------- */
+
+.cajapago {
+    display: block;
+    margin: 35px;
+}
+
+main#main-flex section#info-facturacion form#pago {
+    border: 2px solid black;
+    text-align: left;
+    max-width: fit-content;
+    margin: auto;
 }
 
 
-/* FOOTER */
+/* ESTILOS DE LOS ICONOS ( FONT AWESOME ) -------------------------------------------------------------------------------- */
+.fa-tiktok {
+    color: #141414;
+}
+
+.fa-twitch {
+    color: #6441a5;
+}
+
+.fa-snapchat-square {
+    color: #e4e135;
+}
+
+.fa-instagram {
+    padding: 1px 3px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    border-radius: 15px;
+}
+
+.fa-facebook-square {
+    color: #0f8ff2;
+}
+
+.fa-twitter {
+    color: #1c9cea;
+}
+
+/* FOOTER -------------------------------------------------------------------------------- */
 footer {
     padding: 70px;
     background-color: #181818;

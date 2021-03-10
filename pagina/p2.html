@@ -3,17 +3,18 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Web</title>
+        <title>Pegasus - Facturación</title>
         <link rel="icon" href="../favicon.png" type="image/png">
         <link rel="stylesheet" href="../style.css">
         <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     </head>
 
     <body>
 
         <header>
             <div id="hcontainer">
-                <a href="../index.html"><img src="../assets/logo.png" id="home"></a>
+                <a href="../index.html"><img src="../assets/logo.png" id="home" alt="Logo"></a>
                 <nav>
                     <a href="../index.html" target="_self">Home</a>
                     <a href="p1.html" target="_self" id="itemV">Vehiculos</a>
@@ -21,8 +22,76 @@
             </div>
         </header>
 
-        <main>
-            
+        <main id="main-flex">
+            <aside>
+                <div class="iconos">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-twitch"></i></a>
+                    <a href="#"><i class="fab fa-snapchat-square"></i></a>
+                </div>
+            </aside>
+            <section id="info-facturacion">
+                <form name="pago" id="pago" method="POST">
+
+                    <!-- Datos Identificadores del comprador -->
+
+                    <div class="cajapago">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" size="20" required/>
+                        <label for="apellido">Apellidos</label>
+                        <input type="text" name="apellido" id="apellido" size="20" required/>
+                        <label for="dni">DNI</label>
+                        <input type="text" name="dni" id="dni" maxlength="9" minlength="9" size="6" required/>
+                    </div>
+
+                    <div class="cajapago">
+                        <label for="email">e-mail</label>
+                        <input type="email" name="email" id="email" size="30" required/>
+                    </div>
+
+
+                    <!-- Direccion fisica de envio del producto -->
+
+                    <div class="cajapago">
+                        <select name="tipodir" id="tipodir">
+
+                            <option value="calle">Calle</option>
+                            <option value="avenida">Avda.</option>
+                            <option value="camino">Camino</option>
+                            <option value="carretera">Ctra.</option>
+    
+                        </select>
+                        <label for="dir">Dirección</label>
+                        <input type="text" name="dir" id="dir" size="40" required/>
+                        <label for="numero">Numero</label>
+                        <input type="number" name="numero" id="numero" min="1" max="999" required/>
+                    </div>
+
+                    <!-- Tipo de envio que quiere el comprador -->
+
+                    <div class="cajapago">
+                        <input type="radio" name="envio" id="estandar" checked="checked"/>
+                        <label for="estandar"> Estandar</label><br/>
+                        <input type="radio" name="envio" id="premium"/>
+                        <label for="premium"> Premium</label><br/>
+                        <input type="radio" name="envio" id="vip"/>
+                        <label for="vip"> VIP</label><br/>
+                    </div>
+
+                    <div class="cajapago">
+                        <input type="submit" name="finalizar" id="finalizar" value="Finalizar"/>
+                        <input type="reset" name="reset" id="reset" value="Reiniciar"/>
+                    </div>
+ 
+                </form>
+            </section>
+            <aside>
+                <div class="iconos">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </aside>
         </main>
 
         <footer>
