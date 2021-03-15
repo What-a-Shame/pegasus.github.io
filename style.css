@@ -11,43 +11,62 @@ body{
     font-family: 'Arvo';
 }
 
-/* HEADER -------------------------------------------------------------------------------- */ 
-header{
+/* HEADER & MENU -------------------------------------------------------------------------------- */ 
+header#cabecera{
     text-align: center;
     padding: 25px;
     background-color: #181818;
 }
 
-#hcontainer #home{
+header#cabecera div#home img#home_logo{
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
 }
 
-header nav a{
-    padding: 10px;
-    text-decoration: none;
+header#cabecera nav#menu ul.menuprin a{
+    text-decoration:none;
     text-transform: uppercase;
-    margin: 15px;
-    color: #ffffffff;
+    color: #ffffff;
+    font-size: 15px;
+}
+            
+header#cabecera nav#menu ul.menuprin li{
+    display:inline-block;
+    width:150px;
+    height:30px;
+    padding:5px 10px;
+    background-color:#000;
+    text-align:center;
+    color:#fff;
+    position:relative;
+}
+            
+header#cabecera nav#menu ul.menuprin li:hover{
+    background-color: #333131;
+}
+            
+header#cabecera nav#menu ul.menuprin li > ul.submenu{
+    display:none;
 }
 
-header nav a:hover{
-    color: #046df5;
-    border-bottom: 2px solid #046df5;
-    border-radius: 5px;
+header#cabecera nav#menu ul.menuprin li:hover > ul.submenu{
+    display:block;
+    position:absolute;
+    top:30px;
+    left:0px;
 }
 
 /* MAIN -------------------------------------------------------------------------------- */
 
-/* ANCHO DEL MAIN */
+/* ANCHO DEL MAIN -------------------------------------------------------------------------------- */
 main{
     width: 90%;
     margin: auto;
 }
 
-/* MAIN INDEX.HTML */
-main #seccion1{
+/* MAIN INDEX.HTML -------------------------------------------------------------------------------- */
+main section#seccion1{
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -56,7 +75,7 @@ main #seccion1{
     padding-bottom: 200px;
 }
 
-main #seccion1 a{
+main section#seccion1 a{
     padding: 25px;
     font-size: 1.2em;
     text-decoration: none;
@@ -64,41 +83,41 @@ main #seccion1 a{
     color: #ffffffff;
 }
 
-main #seccion1 a:hover {
+main section#seccion1 a:hover {
     background-color: 	#ffffff65;
     border-radius: 50px;
 }
 
 /* MAIN P1.HTML -------------------------------------------------------------------------------- */
 
-.vehiculos {
+main section.vehiculos {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
 }
 
-.caja-vehiculos {
+main section.vehiculos article.caja-vehiculos {
     margin: 20px;
 }
 
-.infoV p {
+main section.vehiculos article.caja-vehiculos div.infoV p {
     width: 350px;
     text-align: justify;
 }
 
-.vimage {
+main section.vehiculos article.caja-vehiculos div.infoV img.vimage {
     height: 200px;
     width: 350px;  
     vertical-align: middle;
 }
 
-.vdesc {
+main section.vehiculos article.caja-vehiculos div.infoV span.vdesc {
     font-weight: bold;
     display: inline-block;
     vertical-align: middle;
 }
 
-.config{
+main section.vehiculos article.caja-vehiculos div.infoV a.conf{
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -108,13 +127,13 @@ main #seccion1 a:hover {
     border-radius: 50px;
 }
 
-.config:hover {
+main section.vehiculos article.caja-vehiculos div.infoV a.conf:hover {
     background-color: #046cf598;
 }
 
 /* MAIN CONFIGURADOR.HTML -------------------------------------------------------------------------------- */
 
-main #config{
+main section#config{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -123,35 +142,34 @@ main #config{
 
 /* FORMULARIO DE CONFIGURACION -------------------------------------------------------------------------------- */
 
-form .cajones {
+main section#config article form#configurador div.cajones {
     padding: 20px;
     margin: 0 175px;
 }
 
-section#config article #configurador a, select{
+main section#config article form#configurador a, main section#config article form#configurador select{
     border:2px solid #181818 ;
     background-color: #ffffffff;
     padding: 10px;
     border-radius: 50px;
 }
 
-select:focus{
+main section#config article form#configurador select:focus{
     outline: none;
 }
 
-section#config article #configurador a {
+main section#config article form#configurador a {
     text-decoration: none;
     font-weight: bold;
     color: #000000;
     box-shadow: 1px 1px 5px #046df5;
 }
 
-section#config article #configurador a:hover {
+main section#config article form#configurador a:hover {
     background-color: #046cf598;
-    cursor: pointer;
 }
 
-form#configurador label{
+main section#config article form#configurador label{
     display: block;
     text-transform: uppercase;
     font-weight: bold;
@@ -165,14 +183,19 @@ main section#config article#imgconfig {
     width: 50%;
 }
 
-main #config img{
+main section#config article#imgconfig img{
     width: 350px;
     height: 200px;
     margin: 25px 25px;
 }
 
-main section#config article img:hover{
+main section#config article#imgconfig img:hover{
     cursor: pointer;
+    box-shadow: 7px 7px 15px #000000;
+}
+
+main section#config article#imgconfig img:active{
+    border: 2px solid #046df5;
 }
 
 /* P2.HTML -------------------------------------------------------------------------------- */
@@ -181,7 +204,6 @@ main#main-flex {
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
 }
 
 /* CUERPO DEL MAIN -------------------------------------------------------------------------------- */
@@ -193,59 +215,96 @@ main#main-flex section{
 
 /* ASIDE -------------------------------------------------------------------------------- */
 
-.iconos {
+main#main-flex aside div.iconos {
     font-size: 50px;
 }
 
-main#main-flex aside a{
+main#main-flex aside div.iconos a{
     padding: 50px;
     display: flex;
 }
 
-main#main-flex aside a{
+main#main-flex aside div.iconos a{
     text-decoration: none;
 }
 
 /* FORMULARIO DE COMPRA ( P2.HTML ) -------------------------------------------------------------------------------- */
 
-.cajapago {
-    display: block;
+main#main-flex section#info-facturacion form#pago div.cajapago {
     margin: 35px;
+}
+
+main#main-flex section#info-facturacion form#pago label.bloque {
+    display: block;
+}
+
+main#main-flex section#info-facturacion form#pago div.finalbutt {
+    max-width: fit-content;
+    margin: auto;
+}
+
+main#main-flex section#info-facturacion form#pago div.finalbutt input{
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0px 35px;
+    border: 2px solid #181818;
+    background-color: #f1efef;
+    font-weight: bold;
+}
+
+main#main-flex section#info-facturacion form#pago .finalbutt input:hover{
+    cursor: pointer;
+    background-color: #046cf598;
+}
+
+main#main-flex section#info-facturacion form#pago .finalbutt input:focus{
+    outline: none;
 }
 
 main#main-flex section#info-facturacion form#pago {
     border: 2px solid black;
     text-align: left;
     max-width: fit-content;
-    margin: auto;
+    margin: 50px auto;
+}
+
+main#main-flex section#info-facturacion form#pago select{
+    border:2px solid #181818 ;
+    background-color: #ffffffff;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+main#main-flex section#info-facturacion form#pago select:focus {
+    outline: none;
 }
 
 
 /* ESTILOS DE LOS ICONOS ( FONT AWESOME ) -------------------------------------------------------------------------------- */
-.fa-tiktok {
+main#main-flex aside .iconos .fa-tiktok {
     color: #141414;
 }
 
-.fa-twitch {
+main#main-flex aside .iconos .fa-twitch {
     color: #6441a5;
 }
 
-.fa-snapchat-square {
+main#main-flex aside .iconos .fa-snapchat-square {
     color: #e4e135;
 }
 
-.fa-instagram {
+main#main-flex aside .iconos .fa-instagram {
     padding: 1px 3px;
     color: #ffffff;
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
     border-radius: 15px;
 }
 
-.fa-facebook-square {
+main#main-flex aside .iconos .fa-facebook-square {
     color: #0f8ff2;
 }
 
-.fa-twitter {
+main#main-flex aside .iconos .fa-twitter {
     color: #1c9cea;
 }
 

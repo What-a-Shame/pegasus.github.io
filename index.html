@@ -11,22 +11,40 @@
 
     <body>
 
-        <header>
-            <div id="hcontainer">
-                <a href="#"><img src="assets/logo.png" id="home" alt="Logo"></a>
-                <nav>
-                    <a href="#" target="_self">Home</a>
-                    <a href="pagina/p1.html" target="_self" id="itemV">Vehiculos</a>
-                </nav>
+        <!-- Cabecera comun para toda la web -->
+        <header id="cabecera">
+            <!-- Contenedor div, que almacena el logo de la empresa en la cabecera, este funciona tambien como enlace a la pagina home -->
+            <div id="home">
+                <a href="#"><img src="assets/logo.png" id="home_logo" alt="Logo"></a>
             </div>
+
+            <!-- Menu para navegar -->
+            <nav id="menu">
+                <ul class="menuprin">
+                    <!-- Menu "principal" -->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pagina/p1.html">Vehiculos</a>
+                        <!-- Submenu desplegable en el apartado 'Vehiculos' -->
+                        <ul class="submenu">
+                            <li><a href="pagina/p1.html">Porsche</a></li>
+                            <li><a href="#">Lamborghini</a></li>
+                            <li><a href="#">Ferrari</a></li>
+                            <li><a href="#">Tesla</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pagina/configurador.html">Configurador</a></li>
+                </ul>
+            </nav>
         </header>
 
+        <!-- Cuerpo de la pagina -->
         <main>
             <section id="seccion1">
                 <a href="#" target="_self">Descubrir</a>
             </section>
         </main>
 
+        <!-- Pie de pagina comun para toda la web -->
         <footer>
             <small>©Copyright 2021 - All rights reserved</small>
         </footer>
