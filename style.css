@@ -6,17 +6,21 @@
 }
 
 /* BODY -------------------------------------------------------------------------------- */
+/* Misma fuente para toda la web */
 
-body{
+html, body{
     font-family: 'Arvo';
 }
 
-/* HEADER & MENU -------------------------------------------------------------------------------- */ 
+/* HEADER & MENU -------------------------------------------------------------------------------- */
+/* Guara los mismos estilos para toda la web */
 header#cabecera{
     text-align: center;
     padding: 25px;
     background-color: #181818;
 }
+
+/* Estilos para el logo corporativo en la cabecera */
 
 header#cabecera div#home img#home_logo{
     width: 100px;
@@ -24,12 +28,16 @@ header#cabecera div#home img#home_logo{
     margin-bottom: 10px;
 }
 
+/* Estilos de los enlaces disponibles para navegar en el menu */
+
 header#cabecera nav#menu ul.menuprin a{
     text-decoration:none;
     text-transform: uppercase;
     color: #ffffff;
     font-size: 15px;
 }
+
+/* Estilo para el submenu */
             
 header#cabecera nav#menu ul.menuprin li{
     display:inline-block;
@@ -41,14 +49,20 @@ header#cabecera nav#menu ul.menuprin li{
     color:#fff;
     position:relative;
 }
-            
+     
+/* Pseudo clase para interacion con el menu, para hacerlo mas interactivo */
+
 header#cabecera nav#menu ul.menuprin li:hover{
-    background-color: #333131;
+    background-color: #023196;
 }
             
+/* Mientras no estemos sobre un desplegable, el submenu estara oculto */
+
 header#cabecera nav#menu ul.menuprin li > ul.submenu{
     display:none;
 }
+
+/* Mostramos el submenu cuando nos posicionamos sobre un desplegable */
 
 header#cabecera nav#menu ul.menuprin li:hover > ul.submenu{
     display:block;
@@ -60,12 +74,13 @@ header#cabecera nav#menu ul.menuprin li:hover > ul.submenu{
 /* MAIN -------------------------------------------------------------------------------- */
 
 /* ANCHO DEL MAIN -------------------------------------------------------------------------------- */
+/* Etiqueta main, porque este se conserva para toda la web */
 main{
     width: 90%;
     margin: auto;
 }
 
-/* MAIN INDEX.HTML -------------------------------------------------------------------------------- */
+/* MAIN ( INDEX.HTML ) -------------------------------------------------------------------------------- */
 main section#seccion1{
     display: flex;
     align-items: flex-end;
@@ -75,6 +90,8 @@ main section#seccion1{
     padding-bottom: 200px;
 }
 
+/* Estilos de enlace Descubrir */
+
 main section#seccion1 a{
     padding: 25px;
     font-size: 1.2em;
@@ -83,12 +100,14 @@ main section#seccion1 a{
     color: #ffffffff;
 }
 
+/* Pseudo clase para mayor interacion con el usuario*/
+
 main section#seccion1 a:hover {
     background-color: 	#ffffff65;
     border-radius: 50px;
 }
 
-/* MAIN P1.HTML -------------------------------------------------------------------------------- */
+/* MAIN ( P1.HTML ) -------------------------------------------------------------------------------- */
 
 main section.vehiculos {
     display: flex;
@@ -100,10 +119,14 @@ main section.vehiculos article.caja-vehiculos {
     margin: 20px;
 }
 
+/* Estilos de las caracteristicas de cada vehiculo */
+
 main section.vehiculos article.caja-vehiculos div.infoV p {
     width: 350px;
     text-align: justify;
 }
+
+/* Estilos de la imagen de cada vehiculo */
 
 main section.vehiculos article.caja-vehiculos div.infoV img.vimage {
     height: 200px;
@@ -111,11 +134,15 @@ main section.vehiculos article.caja-vehiculos div.infoV img.vimage {
     vertical-align: middle;
 }
 
+/* Descripcion de cada vehiculo */ 
+
 main section.vehiculos article.caja-vehiculos div.infoV span.vdesc {
     font-weight: bold;
     display: inline-block;
     vertical-align: middle;
 }
+
+/* Estilos de enlace a el configurador */
 
 main section.vehiculos article.caja-vehiculos div.infoV a.conf{
     text-decoration: none;
@@ -127,11 +154,13 @@ main section.vehiculos article.caja-vehiculos div.infoV a.conf{
     border-radius: 50px;
 }
 
+/* Pseudo clase para interacion con enlace */
+
 main section.vehiculos article.caja-vehiculos div.infoV a.conf:hover {
     background-color: #046cf598;
 }
 
-/* MAIN CONFIGURADOR.HTML -------------------------------------------------------------------------------- */
+/* MAIN ( CONFIGURADOR.HTML ) -------------------------------------------------------------------------------- */
 
 main section#config{
     display: flex;
@@ -140,7 +169,7 @@ main section#config{
     align-items: center;
 }
 
-/* FORMULARIO DE CONFIGURACION -------------------------------------------------------------------------------- */
+/* FORMULARIO DE CONFIGURACION ( CONFIGURADOR.HTML ) -------------------------------------------------------------------------------- */
 
 main section#config article form#configurador div.cajones {
     padding: 20px;
@@ -177,7 +206,7 @@ main section#config article form#configurador label{
     margin-bottom: 20px;
 }
 
-/* IMAGENES DEL CONFIGURADOR -------------------------------------------------------------------------------- */
+/* IMAGENES DEL CONFIGURADOR ( CONFIGURADOR.HTML ) -------------------------------------------------------------------------------- */
 
 main section#config article#imgconfig {
     width: 50%;
@@ -198,7 +227,7 @@ main section#config article#imgconfig img:active{
     border: 2px solid #046df5;
 }
 
-/* P2.HTML -------------------------------------------------------------------------------- */
+/* ( P2.HTML ) -------------------------------------------------------------------------------- */
 
 main#main-flex {
     display:flex;
@@ -206,14 +235,14 @@ main#main-flex {
     align-items: center;
 }
 
-/* CUERPO DEL MAIN -------------------------------------------------------------------------------- */
+/* CUERPO DEL MAIN ( P2.HTML ) -------------------------------------------------------------------------------- */
 
 main#main-flex section{
     width: 100%;
     text-align: center;
 }
 
-/* ASIDE -------------------------------------------------------------------------------- */
+/* ASIDE ( P2.HTML ) -------------------------------------------------------------------------------- */
 
 main#main-flex aside div.iconos {
     font-size: 50px;
@@ -280,7 +309,7 @@ main#main-flex section#info-facturacion form#pago select:focus {
 }
 
 
-/* ESTILOS DE LOS ICONOS ( FONT AWESOME ) -------------------------------------------------------------------------------- */
+/* ESTILOS DE LOS ICONOS ( FONT AWESOME ) ( P2.HTML ) -------------------------------------------------------------------------------- */
 main#main-flex aside .iconos .fa-tiktok {
     color: #141414;
 }
@@ -309,6 +338,7 @@ main#main-flex aside .iconos .fa-twitter {
 }
 
 /* FOOTER -------------------------------------------------------------------------------- */
+/* Guara los mismos estilos para toda la web */
 footer {
     padding: 70px;
     background-color: #181818;
