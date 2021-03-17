@@ -30,29 +30,28 @@ header#cabecera div#home img#home_logo{
 
 /* Estilos de los enlaces disponibles para navegar en el menu */
 
-header#cabecera nav#menu ul.menuprin a{
-    text-decoration:none;
+header#cabecera nav#menu a{
+    display: inline-block;
+    padding: 10px;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 200px;
+    text-decoration: none;
     text-transform: uppercase;
-    color: #ffffff;
-    font-size: 15px;
 }
 
-/* Estilo para el submenu */
+/* Estilo para el menu */
             
 header#cabecera nav#menu ul.menuprin li{
     display:inline-block;
-    width:150px;
-    height:30px;
-    padding:5px 10px;
-    background-color:#000;
     text-align:center;
-    color:#fff;
+    color:#FFFFFF;
     position:relative;
 }
      
 /* Pseudo clase para interacion con el menu, para hacerlo mas interactivo */
 
-header#cabecera nav#menu ul.menuprin li:hover{
+header#cabecera nav#menu a:hover{
     background-color: #023196;
 }
             
@@ -67,8 +66,9 @@ header#cabecera nav#menu ul.menuprin li > ul.submenu{
 header#cabecera nav#menu ul.menuprin li:hover > ul.submenu{
     display:block;
     position:absolute;
-    top:30px;
+    top:39px;
     left:0px;
+    right: 0px;
 }
 
 /* MAIN -------------------------------------------------------------------------------- */
